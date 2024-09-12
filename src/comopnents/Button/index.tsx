@@ -5,6 +5,7 @@ const Button = ({
   children,
   style = 'hard',
   color = 'sky',
+  className,
   onClick = () => {},
 }: ButtonProps) => {
   const baseClasses = "font-bold py-2 px-4 rounded-lg transition-transform duration-300 ";
@@ -28,7 +29,7 @@ const Button = ({
   const styleClasses = colorClasses[color][style];
 
   return (
-    <button onClick={onClick} className={`${baseClasses} ${styleClasses}`}>
+    <button onClick={onClick} className={`${baseClasses} ${styleClasses} ${className}`}>
       {children}
     </button>
   );
